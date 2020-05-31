@@ -7,7 +7,7 @@ pipeline {
         stage('terraform destroy') {
             steps {
                 echo 'Building..'
-                sh "terraform destroy"
+                sh "terraform destroy -auto-approve"
             }
         }
     }
