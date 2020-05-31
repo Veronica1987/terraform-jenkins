@@ -1,9 +1,12 @@
-pipeline{
-  agent any
-  stages{
-    stage('terraform init')
-      steps{
-      sh "terraform init"
-      }
-  }
+pipeline {
+    agent any
+
+    stages {
+        stage('terraform init') {
+            steps {
+                echo 'Building..'
+                sh "terraform init"
+            }
+        }
+    }
 }
